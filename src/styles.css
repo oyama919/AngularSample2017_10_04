@@ -1,5 +1,25 @@
+body{
+  width: 800px;
+  margin: 0 auto;
+}
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
+}
+.books{
+  background: #eee;
+  padding: 20px;
+}
+.book_list{
+  list-style-type: none;
+}
+/*sassにしたい*/
+.book_list__title{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto 5px;
+}
+.book_list__price{
+  margin: 0;
 }
