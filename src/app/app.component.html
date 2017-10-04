@@ -16,3 +16,9 @@
 <hr>
 <p><b>サニタイズ許可版</b></p>
 <p [innerHTML]="safeMsg"></p>
+
+<!-- attrの仕様 -->
+<table border="1">
+  <tr><td [attr.colspan]="len" [attr.data]="datasample">1</td></tr>
+  <tr><td>2</td><td>3</td></tr>
+</table>
