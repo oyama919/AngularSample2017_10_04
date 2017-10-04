@@ -27,4 +27,5 @@ export class AppComponent  {
   };
   len = 2;
   datasample = "datasample text";
+  caseSample = "Case Sample";
 }

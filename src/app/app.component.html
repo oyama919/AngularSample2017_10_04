@@ -21,3 +21,10 @@
   <tr><td [attr.colspan]="len" [attr.data]="datasample">1</td></tr>
   <tr><td>2</td><td>3</td></tr>
 </table>
+
+<p><b>大文字小文字変換</b></p>
+<ul>
+  <li>変換前：{{caseSample}}</li>
+  <li>小文字：{{caseSample | lowercase}}</li>
+  <li>大文字：{{caseSample | uppercase}}</li>
+</ul>
