@@ -10,14 +10,13 @@
   </li>
 </ul>
 
-<!-- テスト -->
 <p><b>普通にサニタイズ</b></p>
 <p [innerHTML]="msg"></p>
 <hr>
 <p><b>サニタイズ許可版</b></p>
 <p [innerHTML]="safeMsg"></p>
 
-<!-- attrの仕様 -->
+<p><b>attrでcolspanとdata属性追加</b></p>
 <table border="1">
   <tr><td [attr.colspan]="len" [attr.data]="datasample">1</td></tr>
   <tr><td>2</td><td>3</td></tr>
