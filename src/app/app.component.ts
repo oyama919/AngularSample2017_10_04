@@ -9,11 +9,13 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class AppComponent  {
   title = 'Angular';
   contnets = 'Angular Sample Contents'
+  contnets = 'Angular Sample Contents';
   book = {
     title: 'Book1',
     price: '3000'
   };
   safeMsg : SafeHtml
+  safeMsg : SafeHtml;
   msg : string = `
         <script>window.alert("こっちはアラートでない");</script>
         <p>HTML文書のエスケープ使用確認</p>
@@ -25,4 +27,5 @@ export class AppComponent  {
     // msgプロパティのサニタイズを許可
     this.safeMsg = sanitizer.bypassSecurityTrustHtml(this.msg);
   }
+  };
 }
