@@ -35,3 +35,11 @@
   <li>number（デフォルト）：{{separatorNumber | number}}</li>
   <li>number（桁数指定 : 5.1-2 5桁整数/2桁少数）：{{separatorNumber | number : '5.1-2'}}</li>
 </ol>
+
+<p><b>文字列「123456789」スライス</b></p>
+<ol>
+  <li>【 | slice:4:7】=> {{sliceMsg | slice:4:7}}</li>
+  <li>【 | slice:4】=> {{sliceMsg | slice:4}}</li>
+  <li>【 | slice:10】=> {{sliceMsg | slice:10}}</li>
+  <li>【 | slice:-3:-2】=> {{sliceMsg | slice:-3:-2}}</li>
+</ol>

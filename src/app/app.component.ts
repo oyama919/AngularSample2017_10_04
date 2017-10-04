@@ -29,4 +29,5 @@ export class AppComponent  {
   datasample = "datasample text";
   caseSample = "Case Sample";
   separatorNumber = 1234.5678;
+  sliceMsg = '123456789';
 }
