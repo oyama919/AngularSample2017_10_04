@@ -9,3 +9,10 @@
     <p class="book_list__price">{{book.price}}円</p>
   </li>
 </ul>
+
+<!-- テスト -->
+<p><b>普通にサニタイズ</b></p>
+<p [innerHTML]="msg"></p>
+<hr>
+<p><b>サニタイズ許可版</b></p>
+<p [innerHTML]="safeMsg"></p>
