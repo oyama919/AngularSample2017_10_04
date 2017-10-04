@@ -28,3 +28,10 @@
   <li>小文字：{{caseSample | lowercase}}</li>
   <li>大文字：{{caseSample | uppercase}}</li>
 </ul>
+
+<p><b>ゼロfillと少数丸め</b></p>
+<ol>
+  <li>元の値：{{separatorNumber}}</li>
+  <li>number（デフォルト）：{{separatorNumber | number}}</li>
+  <li>number（桁数指定 : 5.1-2 5桁整数/2桁少数）：{{separatorNumber | number : '5.1-2'}}</li>
+</ol>

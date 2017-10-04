@@ -28,4 +28,5 @@ export class AppComponent  {
   len = 2;
   datasample = "datasample text";
   caseSample = "Case Sample";
+  separatorNumber = 1234.5678;
 }
