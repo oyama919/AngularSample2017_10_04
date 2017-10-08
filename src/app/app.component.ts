@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'my-app',
@@ -21,10 +21,16 @@ export class AppComponent  {
         <button>「Buttonタグある」</button>
         <font color="Red">インラインの色は出る</font>
         `;
+  safeIframeUrl: SafeResourceUrl;
+  // TODO httpsだとできない要検証
+  iframeUrl = "http://www.buildinsider.net/web/angularjstips/0001";
   constructor(private sanitizer: DomSanitizer) {
     // msgプロパティのサニタイズを許可
     this.safeMsg = sanitizer.bypassSecurityTrustHtml(this.msg);
+    // iframeUrlプロパティのサニタイズを許可
+    this.safeIframeUrl = sanitizer.bypassSecurityTrustResourceUrl(this.iframeUrl);
   };
+
   len = 2;
   datasample = "datasample text";
   caseSample = "Case Sample";
