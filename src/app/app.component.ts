@@ -44,4 +44,16 @@ export class AppComponent  {
   ondblclick(value: string) {
     this.FormMsg = `Hello, ${value}!!`;
   }
+  // 表示すべきメッセージ
+  mailLabels = {
+    '=0'   : '新着メッセージはありません。',
+    '=1'   : 'メッセージがあります。',
+    'other': '#件のメッセージがあります。',
+  }
+  // 新着メール情報
+  mails = [
+    { name: 'ユーザーA', body: 'メッセージ内容' },
+    { name: 'ユーザーB', body: 'メッセージ内容' },
+    { name: 'ユーザーC', body: 'メッセージ内容' },
+  ];
 }

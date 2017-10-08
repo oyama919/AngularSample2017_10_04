@@ -70,3 +70,6 @@
   <input type="button" value="ダブルクリック" (dblclick)="ondblclick(evName.value)" />
   <div>{{FormMsg}}</div>
 </form>
+
+<p><b>メール件数で表示内容を変える</b></p>
+<div>{{ mails.length |i18nPlural: mailLabels }}</div>
