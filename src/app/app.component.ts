@@ -56,4 +56,5 @@ export class AppComponent  {
     { name: 'ユーザーB', body: 'メッセージ内容' },
     { name: 'ユーザーC', body: 'メッセージ内容' },
   ];
+  percentValue = 0.98765;
 }

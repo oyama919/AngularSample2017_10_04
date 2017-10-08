@@ -73,3 +73,10 @@
 
 <p><b>メール件数で表示内容を変える</b></p>
 <div>{{ mails.length |i18nPlural: mailLabels }}</div>
+
+<p><b>percent表示と桁数指定percent表示</b></p>
+<ol>
+  <li>元の値：{{percentValue}}</li>
+  <li>percent（デフォルト）：{{percentValue | percent}}</li>
+  <li>percent（桁数指定）：{{percentValue | percent : '3.1-2'}}</li>
+</ol>
