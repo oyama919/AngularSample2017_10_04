@@ -32,6 +32,7 @@ export class AppComponent  {
   sliceMsg = '123456789';
   sliceData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   result = '現在時刻は不明です';
+  name = "User Name";
 
   onclick(){
     this.result = `現在時刻は、${new Date().toLocaleTimeString()}です。`

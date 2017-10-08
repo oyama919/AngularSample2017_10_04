@@ -51,3 +51,11 @@
 <p><b>現在時刻　イベントハンドラ</b></p>
 <input type="button" value="現在時刻" (click)="onclick()" />
 <div>{{result}}</div>
+
+<p><b>双方向データバインディング</b></p>
+<form>
+  <label for="name">名前：</label>
+  <input id="txtName" name="txtName" type="text"
+  [(ngModel)]="name" />
+  <div>User Name: {{name}}</div>
+</form>
