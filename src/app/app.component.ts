@@ -38,4 +38,8 @@ export class AppComponent  {
     console.log(e);
     this.result = `現在時刻は、${new Date().toLocaleTimeString()}です。`
   }
+  FormMsg ='ダブルクリックで内容が変わります';
+  ondblclick(value: string) {
+    this.FormMsg = `Hello, ${value}!!`;
+  }
 }

@@ -62,3 +62,11 @@
 
 <p><b>consoleへログ出力</b></p>
 <input type="button" value="ログ出力" (click)="onclick($event)" />
+
+<p><b>フォーム入力値をイベントハンドラで操作</b></p>
+<form>
+  <label for="evName">名前：</label>
+  <input id="txtEvName" name="txtEvName" type="text" #evName />
+  <input type="button" value="ダブルクリック" (dblclick)="ondblclick(evName.value)" />
+  <div>{{FormMsg}}</div>
+</form>
