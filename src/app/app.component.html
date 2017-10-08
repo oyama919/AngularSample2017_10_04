@@ -80,3 +80,14 @@
   <li>percent（デフォルト）：{{percentValue | percent}}</li>
   <li>percent（桁数指定）：{{percentValue | percent : '3.1-2'}}</li>
 </ol>
+
+<p><b>通貨記号指定</b></p>
+<ol>
+  <li>元の値：{{currencyValue}}</li>
+  <li>currency（デフォルト）：{{currencyValue | currency}}</li>
+  <li>currency（デフォルト）：{{currencyValue | currency}}</li>
+  <li>currency（コードのみ）：{{currencyValue | currency : 'JPY'}}</li>
+  <li>currency（円）：{{currencyValue | currency : 'JPY': true}}</li>
+  <li>currency（ユーロ）：{{currencyValue | currency : 'EUR': true}}</li>
+  <li>currency（桁数）：{{currencyValue | currency : 'JPY': true: '3.1-3'}}</li>
+</ol>
