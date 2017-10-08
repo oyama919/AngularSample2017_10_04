@@ -30,4 +30,5 @@ export class AppComponent  {
   caseSample = "Case Sample";
   separatorNumber = 1234.5678;
   sliceMsg = '123456789';
+  sliceData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 }
