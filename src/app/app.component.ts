@@ -29,15 +29,17 @@ export class AppComponent  {
   datasample = "datasample text";
   caseSample = "Case Sample";
   separatorNumber = 1234.5678;
+  // スライス
   sliceMsg = '123456789';
   sliceData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  result = '現在時刻は不明です';
   name = "User Name";
-
+  //時刻表示
+  result = '現在時刻は不明です';
   onclick(e: any) {
     console.log(e);
     this.result = `現在時刻は、${new Date().toLocaleTimeString()}です。`
   }
+  // 送信ボタンで値の反映
   FormMsg ='ダブルクリックで内容が変わります';
   ondblclick(value: string) {
     this.FormMsg = `Hello, ${value}!!`;
