@@ -64,4 +64,5 @@ export class AppComponent  {
   ];
   percentValue = 0.98765;
   currencyValue = 12345.67890;
+  activeFlag = true;//falseでスタイル無効化
 }

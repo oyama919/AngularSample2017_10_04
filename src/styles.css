@@ -23,3 +23,6 @@ h1 {
 .book_list__price{
   margin: 0;
 }
+.active{
+  color: blue;
+}
