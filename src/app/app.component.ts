@@ -34,7 +34,8 @@ export class AppComponent  {
   result = '現在時刻は不明です';
   name = "User Name";
 
-  onclick(){
+  onclick(e: any) {
+    console.log(e);
     this.result = `現在時刻は、${new Date().toLocaleTimeString()}です。`
   }
 }
