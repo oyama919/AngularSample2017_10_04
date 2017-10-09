@@ -66,4 +66,14 @@ export class AppComponent  {
   currencyValue = 12345.67890;
   activeFlag = true;//falseでスタイル無効化
   currentDate = new Date();
+  weatherRec =[
+    { day: '2017/10/7', weather: 'rainy' },
+    { day: '2017/10/8', weather: 'cloudy' },
+    { day: '2017/10/9', weather: 'sunny' },
+  ];
+  weatherJP ={
+    'rainy': '雨',
+    'cloudy': '曇り',
+    'sunny': '晴れ',
+  };
 }
