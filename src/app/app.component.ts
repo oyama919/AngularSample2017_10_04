@@ -78,4 +78,5 @@ export class AppComponent  {
   };
   show=true;
   showContent=true;
+  selector='';
 }

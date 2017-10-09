@@ -134,3 +134,30 @@
     <p >未チェック</p>
   </ng-template>
 </form>
+
+<p><b>セレクトボックスで表示内容を切り替える</b></p>
+<form>
+  <select name="selector" [(ngModel)]="selector">
+    <option value="">未選択</option>
+    <option value="content01">Content01</option>
+    <option value="content02">Content02</option>
+    <option value="content03">Content03</option>
+  </select>
+  <div [ngSwitch]="selector">
+    <div *ngSwitchCase="'content01'">
+      <p>Content01</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dolores?</p>
+    </div>
+    <div *ngSwitchCase="'content02'">
+      <p>Content02</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dolores?</p>
+    </div>
+    <div *ngSwitchCase="'content03'">
+      <p>Content03</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dolores?</p>
+    </div>
+    <div *ngSwitchDefault>
+      <p>Default Content</p>
+    </div>
+  </div>
+</form>
