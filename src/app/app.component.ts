@@ -76,4 +76,5 @@ export class AppComponent  {
     'cloudy': '曇り',
     'sunny': '晴れ',
   };
+  show=true;
 }
