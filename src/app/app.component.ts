@@ -77,4 +77,5 @@ export class AppComponent  {
     'sunny': '晴れ',
   };
   show=true;
+  showContent=true;
 }

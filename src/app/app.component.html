@@ -122,3 +122,15 @@
     <p >チェックボックスで表示非表示を切り替わります</p>
   </div>
 </form>
+
+<p><b>チェックボックスで表示内容を切り替える</b></p>
+<form>
+  <label for="showContent">チェック</label>
+  <input id="showContent" name="showContent" type="checkbox" [(ngModel)]="showContent"/>
+  <div *ngIf="showContent; else elseContent">
+    <p >選択中</p>
+  </div>
+  <ng-template #elseContent>
+    <p >未チェック</p>
+  </ng-template>
+</form>
