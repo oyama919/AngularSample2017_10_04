@@ -161,3 +161,14 @@
     </div>
   </div>
 </form>
+
+<p><b>ngForで配列要素表示</b></p>
+<ul>
+  <li *ngFor='let b of books | slice: pgStart: pgStart+pgLen'>{{b.title}} {{b.isbn}}</li>
+</ul>
+<input type="button" (click)="addList()" value="追加">
+<ul class="pagenation">
+  <li><a href="#" (click)="pager(0)">1</a></li>
+  <li><a href="#" (click)="pager(1)">2</a></li>
+  <li><a href="#" (click)="pager(2)">3</a></li>
+</ul>

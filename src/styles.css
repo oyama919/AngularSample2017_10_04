@@ -26,3 +26,19 @@ h1 {
 .active{
   color: blue;
 }
+.pagenation{
+  list-style-type: none;
+}
+.pagenation li{
+  display: inline-block;
+  border: 1px solid #aaa;
+}
+.pagenation a{
+  text-decoration: none;
+  padding: 3px;
+  color: blue;
+  transition: .2s;
+}
+.pagenation a:hover{
+  background: #def;
+}

@@ -79,4 +79,23 @@ export class AppComponent  {
   show=true;
   showContent=true;
   selector='';
+  books=[
+    {title: 'book1', isbn: '1234'},
+    {title: 'book2', isbn: '5678'},
+    {title: 'book3', isbn: '9012'},
+    {title: 'book4', isbn: '3456'},
+    {title: 'book5', isbn: '7890'},
+    {title: 'book6', isbn: '1234'},
+    {title: 'book7', isbn: '5678'},
+  ];
+  addList(){
+    let listNo = this.books.length;
+    listNo++;
+    this.books.push({title: 'book'+listNo, isbn: '0000'});
+  }
+  pgStart=0;
+  pgLen=3;//ページあたりのの表示件数
+  pager(page: number){
+    this.pgStart = this.pgLen * page;
+  }
 }
