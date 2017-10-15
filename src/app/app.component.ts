@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
+import { Add1Component } from './add1.component';
+import { Add2Component } from './add2.component';
+import { Add3Component } from './add3.component';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
 })
 
-export class AppComponent  {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'Angular';
   contnets = 'Angular Sample Contents';
   book = {
@@ -29,7 +32,7 @@ export class AppComponent  {
     this.safeMsg = sanitizer.bypassSecurityTrustHtml(this.msg);
     // iframeUrlプロパティのサニタイズを許可
     this.safeIframeUrl = sanitizer.bypassSecurityTrustResourceUrl(this.iframeUrl);
-  };
+  }
 
   len = 2;
   datasample = "datasample text";
@@ -97,5 +100,19 @@ export class AppComponent  {
   pgLen=3;//ページあたりのの表示件数
   pager(page: number){
     this.pgStart = this.pgLen * page;
+  }
+  //Component動的呼出　エクスポートクラスに追記 inplements OnInit OnDestroy
+  interval: any;
+  comps = [ Add1Component, Add2Component, Add3Component];
+  currentTgt = 0;
+  addView: any = Add1Component;
+  ngOnInit() {
+    this.interval = setInterval(() => {
+      this.currentTgt = (this.currentTgt+1) % this.comps.length;
+      this.addView = this.comps[this.currentTgt];
+    },3000);
+  }
+  ngOnDestroy(){
+    clearInterval(this.interval);
   }
 }

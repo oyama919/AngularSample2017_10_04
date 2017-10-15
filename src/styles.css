@@ -42,3 +42,16 @@ h1 {
 .pagenation a:hover{
   background: #def;
 }
+.add{
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+.add1{
+  background: #ece;
+}
+.add2{
+  background: #eec;
+}
+.add3{
+  background: #cee;
+}
