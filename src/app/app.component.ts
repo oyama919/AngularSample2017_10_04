@@ -115,4 +115,12 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(){
     clearInterval(this.interval);
   }
+  user = {
+    mail: 'sampe@example.com',
+    passwd: '',
+    fullname: 'name',
+  }
+  formValidate(){
+    console.log('メールアドレス:'+this.user.mail);
+  }
 }
