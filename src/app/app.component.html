@@ -198,5 +198,7 @@
   </div>
   <div>
     <input type="submit" value="送信" [disabled]="myForm.invalid" />
+    <input type="reset" value="リセット" [disabled]="!myForm.dirty" />
   </div>
 </form>
+<pre>{{myForm.value | json}}</pre>
