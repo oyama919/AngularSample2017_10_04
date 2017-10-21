@@ -181,20 +181,20 @@
   <div>
     <label for="mail">メールアドレス</label>
     <input id="mail" name="mail" type="email" [(ngModel)]="user.mail" required email #mail="ngModel" />
-    <span *ngIf="mail.errors?.required">メールアドレスは必須です</span>
-    <span *ngIf="mail.errors?.email">メールアドレスを正しい書式で入力して下さい</span>
+    <span *ngIf="mail.errors?.required && mail.dirty">メールアドレスは必須です</span>
+    <span *ngIf="mail.errors?.email && mail.dirty">メールアドレスを正しい書式で入力して下さい</span>
   </div>
   <div>
     <label for="passwd">パスワード</label>
     <input id="passwd" type="password" name="passwd" [(ngModel)]="user.passwd" required minlength="6" #passwd="ngModel" />
-    <span *ngIf="passwd.errors?.required">パスワードは必須です</span>
-    <span *ngIf="passwd.errors?.minlength">パスワードは6文字以上で入力して下さい</span>
+    <span *ngIf="passwd.errors?.required && passwd.dirty">パスワードは必須です</span>
+    <span *ngIf="passwd.errors?.minlength && passwd.dirty">パスワードは6文字以上で入力して下さい</span>
   </div>
   <div>
     <label for="fullname">名前</label>
     <input id="fullname" type="text" name="fullname" [(ngModel)]="user.fullname" required maxlength="30" #fullname="ngModel" />
-    <span *ngIf="fullname.errors?.required">名前は必須です</span>
-    <span *ngIf="fullname.errors?.maxlength">名前は10文字以内で入力して下さい</span>
+    <span *ngIf="fullname.errors?.required && fullname.dirty">名前は必須です</span>
+    <span *ngIf="fullname.errors?.maxlength && fullname.dirty">名前は10文字以内で入力して下さい</span>
   </div>
   <div>
     <input type="submit" value="送信" [disabled]="myForm.invalid" />
