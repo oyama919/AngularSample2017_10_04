@@ -55,3 +55,4 @@ h1 {
 .add3{
   background: #cee;
 }
+input.ng-dirty.ng-invalid { background-color: #fdc; }
