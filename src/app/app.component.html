@@ -233,6 +233,11 @@
       </option>
     </optgroup>
   </select>
+
+  <label for="hasSpaceText">文字数チェック</label><br>
+  <textarea rows="8" cols="80" name="comment" maxlength="100"
+  [(ngModel)]="comment" (input)="commentInput()"></textarea>
+  <span>残り{{commentCount}}文字入力できます</span><br>
   <div>
     <input type="submit" value="送信" [disabled]="myForm.invalid" />
     <input type="reset" value="リセット" [disabled]="!myForm.dirty" />

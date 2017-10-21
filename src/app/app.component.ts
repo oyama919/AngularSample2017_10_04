@@ -160,4 +160,10 @@ export class AppComponent implements OnInit, OnDestroy {
   keys(obj: Object) {
     return Object.keys(obj);
   }
+  commentMaxLength = 100;
+  comment = '';
+  commentCount = this.commentMaxLength;
+  commentInput(){
+    this.commentCount = this.commentMaxLength - this.comment.length;
+  }
 }
