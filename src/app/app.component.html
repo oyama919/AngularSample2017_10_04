@@ -234,13 +234,13 @@
     </optgroup>
   </select>
 
-  <label for="hasSpaceText">文字数チェック</label><br>
+  <label>文字数チェック</label><br>
   <textarea rows="8" cols="80" name="comment" maxlength="100"
   [(ngModel)]="comment" (input)="commentInput()"></textarea>
   <span>残り{{commentCount}}文字入力できます</span><br>
 
   <label for="hasSpaceText">改行区切りでリストに変換</label><br>
-  <textarea name="hasSpaceText" rows="8" cols="80"
+  <textarea id="hasSpaceText" name="hasSpaceText" rows="8" cols="80"
   [ngModel]="spaceTxt.join('\n')"
   (ngModelChange)="spaceTxt=$event.split('\n')"></textarea>
   <div>
