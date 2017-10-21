@@ -238,9 +238,17 @@
   <textarea rows="8" cols="80" name="comment" maxlength="100"
   [(ngModel)]="comment" (input)="commentInput()"></textarea>
   <span>残り{{commentCount}}文字入力できます</span><br>
+
+  <label for="hasSpaceText">改行区切りでリストに変換</label><br>
+  <textarea name="hasSpaceText" rows="8" cols="80"
+  [ngModel]="spaceTxt.join('\n')"
+  (ngModelChange)="spaceTxt=$event.split('\n')"></textarea>
   <div>
     <input type="submit" value="送信" [disabled]="myForm.invalid" />
     <input type="reset" value="リセット" [disabled]="!myForm.dirty" />
   </div>
 </form>
+<ul>
+  <li *ngFor="let noSpaceTxt of spaceTxt">{{noSpaceTxt}}</li>
+</ul>
 <pre>{{myForm.value | json}}</pre>

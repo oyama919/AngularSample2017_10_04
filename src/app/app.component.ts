@@ -166,4 +166,5 @@ export class AppComponent implements OnInit, OnDestroy {
   commentInput(){
     this.commentCount = this.commentMaxLength - this.comment.length;
   }
+  spaceTxt: String[] = [];
 }
