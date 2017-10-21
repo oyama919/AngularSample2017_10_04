@@ -123,4 +123,10 @@ export class AppComponent implements OnInit, OnDestroy {
   formValidate(){
     console.log('メールアドレス:'+this.user.mail);
   }
+  genderSelected ='Male';
+  genderData = [
+    { label: 'Male', value: 'Male' },
+    { label: 'Female', value: 'Female' },
+    { label: 'Other', value: 'Other' },
+  ];
 }

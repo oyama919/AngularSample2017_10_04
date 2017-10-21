@@ -196,6 +196,15 @@
     <span *ngIf="fullname.errors?.required && fullname.dirty">名前は必須です</span>
     <span *ngIf="fullname.errors?.maxlength && fullname.dirty">名前は10文字以内で入力して下さい</span>
   </div>
+  <ng-container *ngFor="let item of genderData; index as i">
+    <label class="radio-item">
+      <input  type="radio" name="gender"
+      [(ngModel)]="genderSelected"
+      [value]="item.value"
+      [checked]="genderSelected == item.value" >
+      {{item.label}}
+    </label>
+  </ng-container>
   <div>
     <input type="submit" value="送信" [disabled]="myForm.invalid" />
     <input type="reset" value="リセット" [disabled]="!myForm.dirty" />
