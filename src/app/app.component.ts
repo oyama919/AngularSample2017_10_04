@@ -129,4 +129,35 @@ export class AppComponent implements OnInit, OnDestroy {
     { label: 'Female', value: 'Female' },
     { label: 'Other', value: 'Other' },
   ];
+  drinkData = [
+    { label: 'Tea', value: 'Tea', selected: false },
+    { label: 'Coffee', value: 'Coffee', selected: false },
+    { label: 'Water', value: 'Water', selected: false },
+  ];
+  sampleSelected = "";
+  sampleData = [
+    { label: 'hoge', value: 'hoge', disabled: false },
+    { label: 'fuga', value: 'fuga', disabled: false },
+    { label: 'fugafuga', value: 'fugafuga', disabled: false },
+    { label: 'disabled', value: 'disabled', disabled: true },
+  ];
+  groupDataSelected = "";
+  groupData = {
+    'group1':[
+      { label: 'hoge', value: 'hoge', disabled: false },
+      { label: 'hogehoge', value: 'hogehoge', disabled: false },
+      { label: 'hoge!', value: 'hoge!', disabled: false },
+    ],
+    'group2':[
+      { label: 'fuga', value: 'fuga', disabled: false },
+      { label: 'fugafuga', value: 'fugafuga', disabled: false },
+      { label: 'fuga!', value: 'fuga!', disabled: false },
+    ],
+    'group3':[
+      { label: 'disabled', value: 'disabled', disabled: true },
+    ]
+  };
+  keys(obj: Object) {
+    return Object.keys(obj);
+  }
 }

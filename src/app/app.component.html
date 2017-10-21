@@ -205,6 +205,34 @@
       {{item.label}}
     </label>
   </ng-container>
+  <ng-container *ngFor="let item of drinkData; index as i">
+    <label class="checkbox-item">
+      <input  type="checkbox" name="drink{{i}}"
+      [(ngModel)]="drinkData[i].selected"
+      [value]="item.value"
+      [checked]="drinkSelected == item.value"
+      (chenge)="show(i)">{{item.label}}
+    </label>
+  </ng-container>
+  <select name="sampleData" [(ngModel)]="sampleSelected">// size=""指定でリストボックスにもなる
+    <option value="">選択して下さい</option>
+    <option *ngFor="let item of sampleData"
+      [value]="item.value"
+      [disabled]="item.disabled"
+      [selected]="item.value === selected">{{item.label}}
+    </option>
+  </select>
+  <select name="groupData" [(ngModel)]="groupDataSelected">
+    <option value="">選択して下さい</option>
+    <optgroup *ngFor="let group of keys(groupData)"
+      label= {{group}}>
+      <option *ngFor="let item of groupData[group]"
+        [value]="item.value"
+        [disabled]="item.disabled"
+        [selected]="item.value === selected">{{item.label}}
+      </option>
+    </optgroup>
+  </select>
   <div>
     <input type="submit" value="送信" [disabled]="myForm.invalid" />
     <input type="reset" value="リセット" [disabled]="!myForm.dirty" />
