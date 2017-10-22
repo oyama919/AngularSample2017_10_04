@@ -252,3 +252,11 @@
   <li *ngFor="let noSpaceTxt of spaceTxt">{{noSpaceTxt}}</li>
 </ul>
 <pre>{{myForm.value | json}}</pre>
+
+<div id="printer">
+  <p><b>PrinterComponent</b></p>
+  <span *ngFor="let printer of printers">
+    [<a href="#printer" (click)="onPrinterDetailBtnClick(printer)">{{printer.maker}}</a>]
+  </span>
+  <detail-printer [printerItem]="printerSelected"></detail-printer>
+</div>

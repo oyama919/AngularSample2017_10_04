@@ -3,6 +3,7 @@ import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-brows
 import { Add1Component } from './add1.component';
 import { Add2Component } from './add2.component';
 import { Add3Component } from './add3.component';
+import { Printer }  from "./printer";
 
 @Component({
   selector: 'my-app',
@@ -167,4 +168,28 @@ export class AppComponent implements OnInit, OnDestroy {
     this.commentCount = this.commentMaxLength - this.comment.length;
   }
   spaceTxt: String[] = [];
+  printers = [
+    {
+      maker: 'CANON',
+      series: 'PIXUS TS',
+      modelname: 'PIXUS TS8030',
+      price: 16380,
+    },
+    {
+      maker: 'EPSON',
+      series: 'カラリオ',
+      modelname: 'カラリオ EP-879A',
+      price: 13777,
+    },
+    {
+      maker: 'CANON',
+      series: 'PIXUS MG',
+      modelname: 'PIXUS MG3630',
+      price: 6102,
+    },
+  ];
+  printerSelected: Printer;
+  onPrinterDetailBtnClick(printer: Printer) {
+    this.printerSelected = printer;
+  }
 }
