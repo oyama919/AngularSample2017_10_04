@@ -259,4 +259,5 @@
     [<a href="#printer" (click)="onPrinterDetailBtnClick(printer)">{{printer.maker}}</a>]
   </span>
   <detail-printer [printerItem]="printerSelected"></detail-printer>
+  <edit-printer [printerItem]="printerSelected" (edited)="onPintterEditSubmit($event)"></edit-printer>
 </div>

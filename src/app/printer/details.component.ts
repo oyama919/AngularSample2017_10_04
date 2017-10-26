@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Printer } from './printer';
+import { PrinterData } from './printer-data';
 
 @Component({
   selector: 'detail-printer',
@@ -13,6 +13,6 @@ import { Printer } from './printer';
   `
 })
 
-export class PrinterDetailsComponent {
-  @Input() printerItem: Printer;
+export class DetailsComponent {
+  @Input() printerItem: PrinterData;
  }

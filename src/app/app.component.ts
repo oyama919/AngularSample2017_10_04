@@ -3,7 +3,7 @@ import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-brows
 import { Add1Component } from './add1.component';
 import { Add2Component } from './add2.component';
 import { Add3Component } from './add3.component';
-import { Printer }  from "./printer";
+import { PrinterData }  from "./printer/printer-data";
 
 @Component({
   selector: 'my-app',
@@ -188,8 +188,18 @@ export class AppComponent implements OnInit, OnDestroy {
       price: 6102,
     },
   ];
-  printerSelected: Printer;
-  onPrinterDetailBtnClick(printer: Printer) {
+  printerSelected: PrinterData;
+  onPrinterDetailBtnClick(printer: PrinterData) {
     this.printerSelected = printer;
+  }
+  onPintterEditSubmit(printer: PrinterData) {
+    for (let item of this.printers) {
+      if (item.modelname == printer.modelname) {
+        item.maker = printer.maker;
+        item.price = printer.price;
+        item.series = printer.series;
+      }
+    }
+    this.printerSelected =null;
   }
 }
